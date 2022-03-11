@@ -1,0 +1,10 @@
+<Project>
+  <PropertyGroup>
+    <LangVersion>9.0</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Authors>Karen Payne</Authors>
+    <Company>OED</Company>
+  </PropertyGroup>  
+</Project>
