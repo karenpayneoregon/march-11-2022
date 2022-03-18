@@ -4,7 +4,38 @@
     ViewData["Title"] = "Home page";
 }
 
+<link rel="stylesheet" href="css/bootstrap-dialog.min.css"/>
+<script src="lib/jquery/dist/jquery.min.js"></script>
+<script src="js/bootstrap-dialog.min.js"></script>
+<script src="js/oed_helpers.js"></script>
+
 <div class="text-center">
     <h1 class="display-4">Hello</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <button type="button" id="clicker" class="btn btn-primary mt-5" >
+        Show
+    </button>
 </div>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        $("#clicker").click(function () {
+
+
+            BootstrapDialog.show({
+                message: 'Hello world!', verticalCentered: true,
+                onhidden: function () {
+                    oed_helpers.ChickenConfirm();
+                }
+            });
+
+
+
+
+        });
+
+
+    });
+</script>

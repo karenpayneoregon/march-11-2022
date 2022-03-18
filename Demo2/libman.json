@@ -1,0 +1,13 @@
+{
+  "version": "1.0",
+  "defaultProvider": "filesystem",
+  "libraries": [
+    {
+      "library": "\\\\devweb02\\HTTP\\headfoot\\bootstrap5Dialogs\\js\\",
+      "destination": "wwwroot/js/",
+      "files": [
+        "bootstrap-dialog.min.js"
+      ]
+    }
+  ]
+}
