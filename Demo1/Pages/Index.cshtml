@@ -8,9 +8,9 @@
 <script src="lib/jquery/dist/jquery.min.js"></script>
 <script src="js/bootstrap-dialog.js"></script>
 
-<link rel="stylesheet" href="bootstrap/css/bootstrap-icons.css"/>
+<link rel="stylesheet" href="bootstrap/css/bootstrap-icons.css" />
 <script src="js/index.js"></script>
-<link rel="stylesheet" href="css/index.css"/>
+<link rel="stylesheet" href="css/index.css" />
 
 
 <div class="container">
@@ -30,21 +30,5 @@
 
 </div>
 
-<div class="container">
+<partial name="PartialDemo" model=@("Oops! Page Not Found") />
 
-    <div class="row">
-        <div class="col-md-12">
-            <div class="error-template">
-                @*<h1><span class="bi-chevron-compact-left" /> class="bi-chevron-compact-right"></h1>*@
-                <h1><span class="bi-chevron-compact-left"></span>404<span class="bi-chevron-compact-right"></span></h1>
-                <h2>Oops! Page Not Found</h2>
-                <div>Sorry, but the page you were trying to view does not exist</div>
-                <div class="error-actions">
-                    <button class="btn btn-primary btn-lg"><i class="bi-house-door-fill"></i> Go to Homepage </button>
-                    <button class="btn btn-secondary btn-lg"><i class="bi-envelope-fill"></i> Contact Support </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</div>
