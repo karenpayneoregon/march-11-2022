@@ -4,38 +4,46 @@
     ViewData["Title"] = "Home page";
 }
 
-<link rel="stylesheet" href="css/bootstrap-dialog.min.css"/>
+<link rel="stylesheet" href="css/bootstrap-dialog.min.css" />
 <script src="lib/jquery/dist/jquery.min.js"></script>
-<script src="js/bootstrap-dialog.min.js"></script>
-<script src="js/oed_helpers.js"></script>
+<script src="js/bootstrap-dialog.js"></script>
 
-<div class="text-center">
-    <h1 class="display-4">Hello</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-    <button type="button" id="clicker" class="btn btn-primary mt-5" >
-        Show
-    </button>
+<link rel="stylesheet" href="bootstrap/css/bootstrap-icons.css"/>
+<script src="js/index.js"></script>
+<link rel="stylesheet" href="css/index.css"/>
+
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-3">
+            <div class="circle ml-4">OED</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-3"><button type="button" id="clicker" class="btn btn-primary mt-5">Bootstrap dialog w/o divs</button></div>
+        <div class="col-3"><button type="button" class="btn btn-primary mt-5"> Bootstrap dialog w/o divs</button></div>
+        <div class="col-3"><button type="button" class="btn btn-primary mt-5">Bootstrap dialog w/o divs</button></div>
+        <div class="col-3"><button type="button" class="btn btn-primary mt-5">Bootstrap dialog w/o divs</button></div>
+    </div>
+
 </div>
 
-<script type="text/javascript">
-
-    $(document).ready(function () {
-
-        $("#clicker").click(function () {
-
-
-            BootstrapDialog.show({
-                message: 'Hello world!', verticalCentered: true,
-                onhidden: function () {
-                    oed_helpers.ChickenConfirm();
-                }
-            });
-
-
-
-
-        });
-
-
-    });
-</script>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="error-template">
+                <h1><span class="bi-chevron-compact-left"></span>404<span class="bi-chevron-compact-right"></h1>
+                <h2>Oops! Page Not Found</h2>
+                <div>
+                    Sorry, but the page you were trying to view does not exist
+                </div>
+                <div class="error-actions">
+                    <button class="btn btn-primary btn-lg"><i class="bi-house-door-fill"></i> Go to Homepage </button>
+                    <a href="/" class="btn btn-secondary btn-lg"><i class="bi-envelope-fill"></i> Contact Support </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

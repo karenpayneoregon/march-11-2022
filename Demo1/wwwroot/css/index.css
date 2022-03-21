@@ -1,0 +1,25 @@
+﻿.error-template {
+    padding: 40px 15px;
+    text-align: center;
+}
+
+.error-actions {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.error-actions i[class^="bi-"]::before, .error-actions i[class*=" bi-"]::before {
+    line-height: 1.2 !important;
+}
+
+.circle {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    font-size: 12px;
+    color: #fff;
+    line-height: 55px;
+    text-align: center;
+    background: #28A745
+}
+
