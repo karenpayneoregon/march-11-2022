@@ -19,7 +19,8 @@ namespace Demo1.Pages
 
         public void OnGet()
         {
-
+            ViewData["Message"] = $"Injected from {nameof(OnGet)}";
+            ViewData["Date"] = $"{DateTime.Now:d}";
         }
     }
 }

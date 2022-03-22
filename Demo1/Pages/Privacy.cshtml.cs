@@ -19,6 +19,7 @@ namespace Demo1.Pages
 
         public void OnGet()
         {
+            ViewData["Title"] = "Privacy hijacked";
         }
     }
 }

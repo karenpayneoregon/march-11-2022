@@ -1,11 +1,57 @@
 @page
 @model PrivacyModel
 @{
-    ViewData["Title"] = "Privacy Policy";
+
 }
 <h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Policy 1
+            </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <p>EPIC maintains a variety of resources on U.S., state, and international data protection laws to educate policymakers and others interested in learning about privacy and civil liberties issues.</p>
+                <h3>BACKGROUND</h3>
+                <p>The U.S. lacks a comprehensive privacy law. Despite increased interest in privacy and data protection in recent years, the federal laws in the U.S. governing the privacy of personal data largely regulate certain industries and categories of data.</p>
+                <p>Most privacy legislation in the United States is enacted at the state level. Many states have privacy legislation on employment privacy (drug testing, background checks, employment records), Social Security Numbers, video rental data, credit reporting, cable television records, arrest and conviction records, student records, tax records, wiretapping, video surveillance, identity theft, library records, financial records, insurance records, privileges (relationships between individuals that entitle communications to privacy), and medical records.</p>
+                <p>Internationally, foreign governments have enacted more comprehensive data protection legislation, most notably the European Union’s General Data Protection Regulation (GDPR).</p>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                AI & Human Rights
+            </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <h3>BACKGROUND</h3>
+                <p>Artificial Intelligence (AI) systems are used by many private sector and government entities. The definition of AI is subject to much debate, and the degree of technological sophistication in the systems can vary greatly. But there is no doubt that the use and development of AI systems is expanding rapidly.</p>
+                <p>The use of AI is largely unregulated in the United States, and the inner workings of the systems are often opaque. In many cases, members of the public are not even aware that AI systems are being used to make decisions that impact their lives.</p>
+
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Democracy & Free Speech
+            </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <p>Free speech and privacy protections are essential to civic life and to healthy democratic processes. EPIC works to ensure that technology laws and oversight mechanisms protect our rights and support principles of democratic governance.</p>
+                <h3>BACKGROUND</h3>
+                <p>The right to privacy is deeply intertwined with civic engagement, the health of democratic institutions, and the fight for racial and social justice. Without the secret ballot, voters may face intimidation, reprisals, and the risk of tainted elections. Without census confidentiality measures, the public may be deterred from providing the candid answers needed for a fair and accurate enumeration. Without anonymity or associational privacy, protestors and donors may be chilled from registering their support for causes they believe in. Without the right to read or safeguards against online abuse, individuals cannot safely engage in the free exchange of information and ideas. And without focusing on the special threats that surveillance, data collection, and algorithmic discrimination pose to marginalized populations, we cannot ensure privacy or democratic participation for all.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
 @section AnotherFooter {
     <div id="mainFooter" class="container">

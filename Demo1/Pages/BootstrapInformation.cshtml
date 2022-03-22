@@ -1,0 +1,70 @@
+﻿@page
+@model Demo1.Pages.BootstrapInformationModel
+@{
+}
+
+<link rel="stylesheet" href="bootstrap/css/bootstrap-icons.css" />
+<script src="lib/jquery/dist/jquery.min.js"></script>
+
+<div class="alert alert-primary" role="alert">
+    Various links for Bootstrap 5 <i class="bi-bootstrap"></i> to explore!!!
+</div>
+
+<div class="list-group">
+    <a href="https://getbootstrap.com/docs/5.0/getting-started/introduction/" class="list-group-item list-group-item-action list-group-item-primary">Getting started</a>
+    <a href="https://getbootstrap.com/docs/5.0/layout/containers/" class="list-group-item list-group-item-action list-group-item-primary">Containers</a>
+    <a href="https://getbootstrap.com/docs/5.0/utilities/spacing/" class="list-group-item list-group-item-action list-group-item-primary">Spacing</a>
+    <a href="https://getbootstrap.com/docs/5.0/utilities/sizing/" class="list-group-item list-group-item-action list-group-item-primary">Sizing</a>
+    <a href="https://getbootstrap.com/docs/5.0/utilities/colors/" class="list-group-item list-group-item-action list-group-item-primary">Colors</a>
+    <a href="https://getbootstrap.com/docs/5.0/content/tables/" class="list-group-item list-group-item-action list-group-item-primary">Tables</a>
+    <a href="https://getbootstrap.com/docs/5.0/forms/overview/" class="list-group-item list-group-item-action list-group-item-primary">Forms</a>
+    <a href="https://getbootstrap.com/docs/5.0/components" class="list-group-item list-group-item-action list-group-item-primary">Components</a>
+</div>
+
+<div class="container mt-lg-4">
+    <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+</div>
+
+@*
+    https://stackoverflow.com/questions/1057574/wrap-text-in-td-tag
+
+*@
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+    <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header text-primary">
+            <strong class="me-auto">You have new messages</strong>
+            <small class="text-muted">Just now</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body text-white bg-primary">
+            Please read them soon
+        </div>
+    </div>
+</div>
+
+
+
+
+@section AnotherFooter {
+    <div id="mainFooter" class="container">
+        <img src="https://img.shields.io/badge/Karen%20Payne-Instructor-blue" alt="">
+        <script>document.write(/\d{4}/.exec(Date())[0])</script> - <a asp-area="" asp-page="/Index">Home</a>
+    </div>
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        // have all links use a new window
+        $('a').attr("target", "_blank");
+
+        // active a toast
+        $("#liveToastBtn").click(function () {
+            $('.toast').toast('show');
+        });
+
+        // override toast default timeout, can also be done via data attributes
+        //      data - delay="2000" data-autohide="false"
+        $('.toast').toast({ delay: 2000, animation: false });
+    });
+</script>
