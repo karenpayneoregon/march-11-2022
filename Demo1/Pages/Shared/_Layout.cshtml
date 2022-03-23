@@ -3,25 +3,12 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>@ViewData["Title"] - March 25</title>
 
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
-    <style>
-
-        .body-container {
-            /*remove the container default padding attribute*/
-            padding-left: 0px !important;
-            padding-right: 0px !important;
-            max-width: 100%;
-        }
-
-        .full-width {
-            width: 97%;
-            margin-left: 20px;
-            margin-right: 200px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/oed.css" />
 </head>
 <body>
     <header>
@@ -75,6 +62,7 @@
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="js/bootstrap-dialog.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    
     <script src="js/oed-dialogs.js"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
