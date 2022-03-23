@@ -6,38 +6,31 @@
 <link rel="stylesheet" href="bootstrap/css/bootstrap-icons.css" />
 <script src="lib/jquery/dist/jquery.min.js"></script>
 
-<div class="container">
-    
-    <div class="row">
-        <div class="col-12">
-            <div class="alert alert-light col-12 text-center" role="alert">
-                <p class="h1 text-info">Various links for Bootstrap 5 <i class="bi-bootstrap"></i> to explore!!!</p>
-
-            </div>
-        </div>
-
+<div class="full-width pb-1">
+    <div class="card bg-primary text-white">
+        <div class="card-body">This <strong>div</strong> overrides the default layout</div>
     </div>
-
 </div>
+
 
 <div class="container">
 
     <div class="row">
 
         <div class="list-group">
-            <a href="https://getbootstrap.com/docs/5.0/getting-started/introduction/" class="list-group-item list-group-item-action list-group-item-primary">Getting started</a>
-            <a href="https://getbootstrap.com/docs/5.0/layout/containers/" class="list-group-item list-group-item-action list-group-item-primary">Containers</a>
-            <a href="https://getbootstrap.com/docs/5.0/utilities/spacing/" class="list-group-item list-group-item-action list-group-item-primary">Spacing</a>
-            <a href="https://getbootstrap.com/docs/5.0/utilities/sizing/" class="list-group-item list-group-item-action list-group-item-primary">Sizing</a>
-            <a href="https://getbootstrap.com/docs/5.0/utilities/colors/" class="list-group-item list-group-item-action list-group-item-primary">Colors</a>
-            <a href="https://getbootstrap.com/docs/5.0/content/tables/" class="list-group-item list-group-item-action list-group-item-primary">Tables</a>
-            <a href="https://getbootstrap.com/docs/5.0/forms/overview/" class="list-group-item list-group-item-action list-group-item-primary">Forms</a>
-            <a href="https://getbootstrap.com/docs/5.0/components" class="list-group-item list-group-item-action list-group-item-primary">Components</a>
+            <a href="https://getbootstrap.com/docs/5.0/getting-started/introduction/" target="_blank" class="list-group-item list-group-item-action list-group-item-primary">Getting started</a>
+            <a href="https://getbootstrap.com/docs/5.0/layout/containers/" target="_blank" class="list-group-item list-group-item-action list-group-item-primary">Containers</a>
+            <a href="https://getbootstrap.com/docs/5.0/utilities/spacing/" target="_blank" class="list-group-item list-group-item-action list-group-item-primary">Spacing</a>
+            <a href="https://getbootstrap.com/docs/5.0/utilities/sizing/" target="_blank" class="list-group-item list-group-item-action list-group-item-primary">Sizing</a>
+            <a href="https://getbootstrap.com/docs/5.0/utilities/colors/" target="_blank" class="list-group-item list-group-item-action list-group-item-primary">Colors</a>
+            <a href="https://getbootstrap.com/docs/5.0/content/tables/" target="_blank" class="list-group-item list-group-item-action list-group-item-primary">Tables</a>
+            <a href="https://getbootstrap.com/docs/5.0/forms/overview/" target="_blank" class="list-group-item list-group-item-action list-group-item-primary">Forms</a>
+            <a href="https://getbootstrap.com/docs/5.0/components" target="_blank" class="list-group-item list-group-item-action list-group-item-primary">Components</a>
         </div>
 
     </div>
 
-    <div class="row mt-lg-2">
+    @*<div class="row mt-lg-2">
 
         <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
 
@@ -71,20 +64,19 @@
 
         </div>
 
-    </div>
+    </div>*@
 </div>
 
 
-
-<div class="container mt-lg-4">
-    <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+<div class="container mt-1">
+    <button type="button" class="btn btn-sm btn-primary" id="liveToastBtn">Show live toast</button>
 </div>
 
 @* Toast code with two second timeout in document ready *@
 <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
 
     <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
-    
+
         <div class="toast-header text-primary">
             <strong class="me-auto">You have new messages</strong>
             <small class="text-muted">Just now</small>
@@ -94,12 +86,14 @@
         <div class="toast-body text-white bg-primary">
             Please read them soon
         </div>
-        
+
     </div>
 
 </div>
 
-
+<div class="container border rounded-3 border border-success mt-1">
+    <partial name="PartialBootstrap" />
+</div>
 
 @section AnotherFooter {
     <div id="mainFooter" class="container">
@@ -110,9 +104,6 @@
 
 <script type="text/javascript">
     $(document).ready(function () {
-
-        // have all links use a new window
-        $('a').attr("target", "_blank");
 
         // active a toast
         $("#liveToastBtn").click(function () {

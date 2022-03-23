@@ -7,12 +7,26 @@
 
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <style>
 
+        .body-container {
+            /*remove the container default padding attribute*/
+            padding-left: 0px !important;
+            padding-right: 0px !important;
+            max-width: 100%;
+        }
+
+        .full-width {
+            width: 97%;
+            margin-left: 20px;
+            margin-right: 200px;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
+        <nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -34,26 +48,28 @@
             </div>
         </nav>
     </header>
-    <div class="container">
+
+    <div class="container body-container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-<footer class="border-top footer text-muted">
+    <footer class="border-top footer text-muted">
 
-    @if (IsSectionDefined("AnotherFooter"))
-    {
-        @await RenderSectionAsync("AnotherFooter")
-    }
-    else
-    {
-        <div id="mainFooter" class="container">
-            <img src="https://img.shields.io/badge/Karen%20Payne-Instructor-blue" alt=""> <script>document.write(/\d{4}/.exec(Date())[0])</script> - <a asp-area="" asp-page="/Privacy">Privacy</a>
-        </div>
-    }
+        @if (IsSectionDefined("AnotherFooter"))
+        {
+            @await RenderSectionAsync("AnotherFooter")
+        }
+        else
+        {
+            <div id="mainFooter" class="container">
+                <img src="https://img.shields.io/badge/Karen%20Payne-Instructor-blue" alt="">
+                <script>document.write(/\d{4}/.exec(Date())[0])</script> - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            </div>
+        }
 
-</footer>
+    </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
