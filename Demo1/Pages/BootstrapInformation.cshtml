@@ -6,42 +6,98 @@
 <link rel="stylesheet" href="bootstrap/css/bootstrap-icons.css" />
 <script src="lib/jquery/dist/jquery.min.js"></script>
 
-<div class="alert alert-primary" role="alert">
-    Various links for Bootstrap 5 <i class="bi-bootstrap"></i> to explore!!!
+<div class="container">
+    
+    <div class="row">
+        <div class="col-12">
+            <div class="alert alert-light col-12 text-center" role="alert">
+                <p class="h1 text-info">Various links for Bootstrap 5 <i class="bi-bootstrap"></i> to explore!!!</p>
+
+            </div>
+        </div>
+
+    </div>
+
 </div>
 
-<div class="list-group">
-    <a href="https://getbootstrap.com/docs/5.0/getting-started/introduction/" class="list-group-item list-group-item-action list-group-item-primary">Getting started</a>
-    <a href="https://getbootstrap.com/docs/5.0/layout/containers/" class="list-group-item list-group-item-action list-group-item-primary">Containers</a>
-    <a href="https://getbootstrap.com/docs/5.0/utilities/spacing/" class="list-group-item list-group-item-action list-group-item-primary">Spacing</a>
-    <a href="https://getbootstrap.com/docs/5.0/utilities/sizing/" class="list-group-item list-group-item-action list-group-item-primary">Sizing</a>
-    <a href="https://getbootstrap.com/docs/5.0/utilities/colors/" class="list-group-item list-group-item-action list-group-item-primary">Colors</a>
-    <a href="https://getbootstrap.com/docs/5.0/content/tables/" class="list-group-item list-group-item-action list-group-item-primary">Tables</a>
-    <a href="https://getbootstrap.com/docs/5.0/forms/overview/" class="list-group-item list-group-item-action list-group-item-primary">Forms</a>
-    <a href="https://getbootstrap.com/docs/5.0/components" class="list-group-item list-group-item-action list-group-item-primary">Components</a>
+<div class="container">
+
+    <div class="row">
+
+        <div class="list-group">
+            <a href="https://getbootstrap.com/docs/5.0/getting-started/introduction/" class="list-group-item list-group-item-action list-group-item-primary">Getting started</a>
+            <a href="https://getbootstrap.com/docs/5.0/layout/containers/" class="list-group-item list-group-item-action list-group-item-primary">Containers</a>
+            <a href="https://getbootstrap.com/docs/5.0/utilities/spacing/" class="list-group-item list-group-item-action list-group-item-primary">Spacing</a>
+            <a href="https://getbootstrap.com/docs/5.0/utilities/sizing/" class="list-group-item list-group-item-action list-group-item-primary">Sizing</a>
+            <a href="https://getbootstrap.com/docs/5.0/utilities/colors/" class="list-group-item list-group-item-action list-group-item-primary">Colors</a>
+            <a href="https://getbootstrap.com/docs/5.0/content/tables/" class="list-group-item list-group-item-action list-group-item-primary">Tables</a>
+            <a href="https://getbootstrap.com/docs/5.0/forms/overview/" class="list-group-item list-group-item-action list-group-item-primary">Forms</a>
+            <a href="https://getbootstrap.com/docs/5.0/components" class="list-group-item list-group-item-action list-group-item-primary">Components</a>
+        </div>
+
+    </div>
+
+    <div class="row mt-lg-2">
+
+        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+
+            <div class="btn-group  me-2 " role="group" aria-label="First group">
+
+                <button type="button" class="btn btn-danger">
+                    Notifications <span class="badge bg-secondary">10</span>
+                </button>
+
+                <button type="button" class="btn btn-primary">
+                    Notifications <span class="badge bg-secondary">0</span>
+                </button>
+
+                <button type="button" class="btn btn-primary">
+                    Notifications <span class="badge bg-secondary">0</span>
+                </button>
+
+            </div>
+
+            <div class="btn-group  me-2 " role="group" aria-label="Second group">
+                <button type="button" class="btn btn-success">
+                    Notifications <span class="badge bg-light text-black">4</span>
+                </button>
+                <button type="button" class="btn btn-success">
+                    Notifications <span class="badge bg-secondary">4</span>
+                </button>
+                <button type="button" class="btn btn-primary">
+                    Errors <span class="badge bg-danger">225</span>
+                </button>
+            </div>
+
+        </div>
+
+    </div>
 </div>
+
+
 
 <div class="container mt-lg-4">
     <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
 </div>
 
-@*
-    https://stackoverflow.com/questions/1057574/wrap-text-in-td-tag
-
-*@
+@* Toast code with two second timeout in document ready *@
 <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+
     <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+    
         <div class="toast-header text-primary">
             <strong class="me-auto">You have new messages</strong>
             <small class="text-muted">Just now</small>
             <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
         </div>
+
         <div class="toast-body text-white bg-primary">
             Please read them soon
         </div>
+        
     </div>
-</div>
 
+</div>
 
 
 
