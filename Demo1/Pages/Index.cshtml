@@ -1,4 +1,4 @@
-﻿@page
+﻿@page 
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
@@ -6,13 +6,12 @@
 
 <link rel="stylesheet" href="css/bootstrap-dialog.min.css" />
 <script src="lib/jquery/dist/jquery.min.js"></script>
+<script src="js/umd/popper.min.js"></script>
 <script src="js/bootstrap-dialog.js"></script>
-
+<link rel="stylesheet" href="css/offCanvas.css"/>
 <link rel="stylesheet" href="bootstrap/css/bootstrap-icons.css" />
 <script src="js/index.js"></script>
 <link rel="stylesheet" href="css/index.css" />
-
-
 
 <div class="container">
 
@@ -22,20 +21,37 @@
         </div>
     </div>
 
+    <div class="container m-lg-5">
 
-    @* Demo for bootstrap model via script  *@
-    <div class="row">
-        <div class="col-3"><button type="button" id="clicker" class="btn btn-primary mt-5">Bootstrap dialog w/o divs</button></div>
-        <div class="col-3"><button type="button" class="btn btn-primary mt-5">Bootstrap dialog w/o divs</button></div>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+
+            <div class="offcanvas-header">
+                <h5 id="offcanvasRightLabel">Side bar</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <div class="offcanvas-body">
+                @* Here we insert content from another page where the model is a simple string *@
+                <partial name="PartialDemo" model=@("Oops! Page Not Found")/>
+            </div>
+
+        </div>
+
     </div>
 
-</div>
 
+    
+    <div class="row">
+        @* Demo for bootstrap model via script  *@
+        <div class="col-3">
+            <button type="button" id="clicker" class="btn btn-primary mt-5 btn-block">Bootstrap dialog w/o divs</button>
+        </div>
+        @* Demo for bootstrap off-canvas via script  *@
+        <div class="col-3">
+            <button class="btn btn-primary  mt-5 btn-block" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Side bar example</button>
+        </div>
+    </div>
 
-@* Here we insert content from another page where the model is a simple string *@
-
-<div class="container border rounded-3 border border-success mt-4">
-    <partial name="PartialDemo" model=@("Oops! Page Not Found") />
 </div>
 
 
@@ -52,7 +68,7 @@
         p-2
 
 *@
-<div class="d-flex justify-content-center flex-nowrap mt-4">
+<div class="d-flex justify-content-center flex-nowrap mt-4 border border-danger">
     <div class="bg-secondary text-white  border border-warning border-3 mx-2 p-2">
         @ViewData["Message"]
     </div>

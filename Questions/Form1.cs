@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Utilities.Classes;
 using System.Windows.Forms;
+using System.Xml;
+using System.Xml.Serialization;
 using Questions.Classes;
 
 namespace Questions
@@ -37,6 +39,53 @@ namespace Questions
             var p = new UserProcess { StartInfo = new ProcessStartInfo("C:\\Users\\paynek\\Documents") { UseShellExecute = true } };
             p.Start();
 
+        }
+
+        private async void button4_Click(object sender, EventArgs e)
+        {
+            await Task.Run(async () =>
+            {
+                await Task.Delay(1);
+                ExchangeOperations.LoadRatesAsync();
+            });
+
+
+            decimal amount = 4;
+            decimal conversionNum = (amount / ExchangeOperations.ExchangeRateToEuro["USD"]) * 
+                                    ExchangeOperations.ExchangeRateToEuro["GBP"];
+
+            Debug.WriteLine(conversionNum.ToString("0.00"));
+        }
+    }
+
+    class MyClass
+    {
+        private double? _Width;
+        [XmlIgnore]
+        public double? WidthRound
+        {
+            get => _Width;
+            set
+            {
+                if (value != null) _Width = Math.Round(value.Value, 2);
+            }
+        }
+        [XmlText]
+        [XmlElement("WidthRound")]
+        public string WidthRoundValue
+        {
+            get => WidthRound == null ? null : XmlConvert.ToString(WidthRound.Value);
+            set
+            {
+                if (value != null)
+                {
+                    WidthRound = XmlConvert.ToDouble(value);
+                }
+                else
+                {
+                    WidthRound = null;
+                }
+            }
         }
     }
 }
