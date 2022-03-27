@@ -1,6 +1,7 @@
 ﻿@page
 @model IndexModel
 @{
+    // Change to side bar page for _LayoutSidebar.cshtml
     ViewData["Title"] = "Home page";
 }
 <script src="jquery/jquery.min.js"></script>
@@ -9,14 +10,20 @@
 <script src="js/index.js"></script>
 
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-</div>
 
-<div class="container">
-    <div class="row">
-        <div class="col text-center">
-            <button id="clicker" class="btn btn-success">Centered button</button>
+
+@if (ViewData["Title"].ToString() == "Home page")
+{
+    <div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <button id="clicker" class="btn btn-success">Centered button</button>
+            </div>
         </div>
     </div>
-</div>
+}
+
