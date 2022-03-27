@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+		<TargetFramework>net5.0</TargetFramework>
+		<LangVersion>9.0</LangVersion>
+		<SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+		<CopyRefAssembliesToPublishDirectory>false</CopyRefAssembliesToPublishDirectory>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Content Remove="wwwroot\bootstrap\css\fonts\bootstrap-icons.woff2" />
+	  <Content Remove="wwwroot\js\umd\popper-utils.js" />
+	  <Content Remove="wwwroot\js\umd\popper-utils.js.map" />
+	  <Content Remove="wwwroot\js\umd\popper-utils.min.js" />
+	  <Content Remove="wwwroot\js\umd\popper-utils.min.js.map" />
+	  <Content Remove="wwwroot\js\umd\popper.js" />
+	  <Content Remove="wwwroot\js\umd\popper.js.flow" />
+	  <Content Remove="wwwroot\js\umd\popper.js.map" />
+	  <Content Remove="wwwroot\js\umd\popper.min.js" />
+	  <Content Remove="wwwroot\js\umd\popper.min.js.map" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="readme.md" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="readme.md" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="wwwroot\bootstrap\css\fonts\bootstrap-icons.woff2" />
+	  <None Include="wwwroot\js\umd\popper-utils.js" />
+	  <None Include="wwwroot\js\umd\popper-utils.js.map" />
+	  <None Include="wwwroot\js\umd\popper-utils.min.js" />
+	  <None Include="wwwroot\js\umd\popper-utils.min.js.map" />
+	  <None Include="wwwroot\js\umd\popper.js" />
+	  <None Include="wwwroot\js\umd\popper.js.flow" />
+	  <None Include="wwwroot\js\umd\popper.js.map" />
+	  <None Include="wwwroot\js\umd\popper.min.js" />
+	  <None Include="wwwroot\js\umd\popper.min.js.map" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.15" />
+		<PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="2.2.0" />
+	</ItemGroup>
+
+</Project>

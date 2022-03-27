@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Serialization;
 using Questions.Classes;
+using Questions.Extensions;
 
 namespace Questions
 {
@@ -55,6 +57,18 @@ namespace Questions
                                     ExchangeOperations.ExchangeRateToEuro["GBP"];
 
             Debug.WriteLine(conversionNum.ToString("0.00"));
+
+            
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            var fileName = Helpers.UniqueFileName("C:\\Temp");
+            if (!File.Exists(fileName))
+            {
+                File.WriteAllText(fileName, "");
+            }
+
         }
     }
 

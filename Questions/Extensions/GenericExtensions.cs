@@ -1,11 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 namespace Questions.Extensions
 {
+    public class Helpers
+    {
+        public static string UniqueFileName(string basePath,string extension = ".zip") => 
+            Path.Combine(basePath, $"{DateTime.Now:yyyy-dd-M-HH-mm-ss-ms}{extension}");
+            
+    }
     public static class GenericExtensions
     {
+
+
         public static bool IsNull(this object sender)
         {
             return sender == null || sender == DBNull.Value || Convert.IsDBNull(sender) == true;

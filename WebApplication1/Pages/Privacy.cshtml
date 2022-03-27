@@ -1,0 +1,27 @@
+﻿@page
+@model PrivacyModel
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1 class="mb-4">@ViewData["Title"]</h1>
+
+<div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                About
+            </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <p>place holder</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section AnotherFooter {
+    <div id="mainFooter" class="container">
+        <script>document.write(/\d{4}/.exec(Date())[0])</script> - <a asp-area="" asp-page="/Index">Home</a>
+    </div>
+}
