@@ -2,7 +2,9 @@
 @model IndexModel
 @{
     // Change to side bar page for _LayoutSidebar.cshtml
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Home page q";
+    string page = ViewContext.RouteData.Values["page"] as string;
+    string title = ViewData["Title"] as string;
 }
 <script src="jquery/jquery.min.js"></script>
 <link rel="stylesheet" href="css/bootstrap-dialog.min.css" />
@@ -14,16 +16,38 @@
 
 @if (ViewData["Title"].ToString() == "Home page")
 {
-    <div class="text-center">
-        <h1 class="display-4">Welcome</h1>
-    </div>
+    @*<div class="text-center">
+        <h1 class="display-4">Welcome </h1>
 
-    <div class="container">
+    </div>*@
+
+    @*@Html.Raw($"[{title}]")
+
+    @if (title == "Home page")
+    {
+        <ul>
+            <li class="nav-item">
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#">Events</a>
+            </li>
+        </ul>
+
+    }
+    else
+    {
+        @Html.Raw($"[{title}]")
+
+    }*@
+}
+
+@*@Html.Raw($"[{title}]")*@
+
+@*<div class="container">
         <div class="row">
             <div class="col text-center">
                 <button id="clicker" class="btn btn-success">Centered button</button>
             </div>
         </div>
-    </div>
-}
+    </div>*@
+
+
 
