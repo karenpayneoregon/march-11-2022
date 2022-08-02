@@ -14,40 +14,15 @@
 
 
 
-@if (ViewData["Title"].ToString() == "Home page")
-{
-    @*<div class="text-center">
-        <h1 class="display-4">Welcome </h1>
+<div class="d-flex" id="wrapper">
 
-    </div>*@
+    <partial name="_SideMenu" />
 
-    @*@Html.Raw($"[{title}]")
-
-    @if (title == "Home page")
-    {
-        <ul>
-            <li class="nav-item">
-                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#">Events</a>
-            </li>
-        </ul>
-
-    }
-    else
-    {
-        @Html.Raw($"[{title}]")
-
-    }*@
-}
-
-@*@Html.Raw($"[{title}]")*@
-
-@*<div class="container">
-        <div class="row">
-            <div class="col text-center">
-                <button id="clicker" class="btn btn-success">Centered button</button>
-            </div>
-        </div>
-    </div>*@
+    <!-- Page content wrapper-->
+    <div id="page-content-wrapper">
+        <partial name="_Navigation" />
+        <partial name="_MainContent" />
+    </div>
 
 
-
+</div>

@@ -9,6 +9,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <Content Remove="Pages\Index - Copy.cshtml" />
 	  <Content Remove="wwwroot\bootstrap\css\fonts\bootstrap-icons.woff2" />
 	  <Content Remove="wwwroot\js\umd\popper-utils.js" />
 	  <Content Remove="wwwroot\js\umd\popper-utils.js.map" />
@@ -30,6 +31,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Include="Pages\Index - Copy.cshtml" />
 	  <None Include="wwwroot\bootstrap\css\fonts\bootstrap-icons.woff2" />
 	  <None Include="wwwroot\js\umd\popper-utils.js" />
 	  <None Include="wwwroot\js\umd\popper-utils.js.map" />
